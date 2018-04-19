@@ -195,23 +195,23 @@ static void CheckTick(int client)
     }
     else if(team == 1)
     {
-        if(g_iClientTick[client] >= 150)
+        if(g_iClientTick[client] >= 300)
         {
             LogEx(client, "Kick from Specator");
             KickClient(client, "[AFK Manager]  您因为挂机被踢出游戏.");
         }
-        else if(g_iClientTick[client] > 1)
-            Text(client, "<font size='28' color='#0000ff' face='consolas'>[AFK]</font>  <font size='22' color='#00ff00'>您还有</font> <font size='28' color='#ff0000' face='consolas'>%02d秒</font> <font size='22' color='#00ff00'>就要被移除出游戏.", 150 - g_iClientTick[client]); 
+        else if(g_iClientTick[client] >= 240)
+            Text(client, "<font size='28' color='#0000ff' face='consolas'>[AFK]</font>  <font size='22' color='#00ff00'>您还有</font> <font size='28' color='#ff0000' face='consolas'>%02d秒</font> <font size='22' color='#00ff00'>就要被移除出游戏.", 300 - g_iClientTick[client]); 
     }
     else
     {
-        if(g_iClientTick[client] >= 60)
+        if(g_iClientTick[client] >= 90)
         {
             ChangeClientTeam(client, 1);
             LogEx(client, "Move to Specator from %s", team == 2 ? "TE" : "CT");
         }
-        else if(g_iClientTick[client] > 1)
-            Text(client, "<font size='28' color='#0000ff' face='consolas'>[AFK]</font>  <font size='22' color='#00ff00' >您还有</font> <font size='28' color='#ff0000' face='consolas'>%02d秒</font> <font size='22' color='#00ff00'>就要被移动到观察者.", 60 - g_iClientTick[client]); 
+        else if(g_iClientTick[client] >= 60)
+            Text(client, "<font size='28' color='#0000ff' face='consolas'>[AFK]</font>  <font size='22' color='#00ff00' >您还有</font> <font size='28' color='#ff0000' face='consolas'>%02d秒</font> <font size='22' color='#00ff00'>就要被移动到观察者.", 90 - g_iClientTick[client]); 
     }
 
     g_iClientTick[client]++;
