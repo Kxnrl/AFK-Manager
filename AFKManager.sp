@@ -8,9 +8,9 @@
 /*                                                                */
 /*                                                                */
 /*  Copyright (C) 2018  Kyle                                      */
-/*  2018/04/20 05:48:00                                           */
+/*  2018/04/22 13:14:00                                           */
 /*                                                                */
-/*  This code is licensed under the MIT License.                  */
+/*  This code is licensed under the GPLv3 License.                  */
 /*                                                                */
 /******************************************************************/
 
